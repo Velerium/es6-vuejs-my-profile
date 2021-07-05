@@ -8,13 +8,6 @@ function newPost() {
     document.querySelector('.post-input').value = '';
 };
 
-function deletePost(index) {
-    console.log(Array.from(document.querySelectorAll('.post')))
-    Array.from(document.querySelectorAll('.post')).splice(index, 1);
-    console.log(Array.from(document.querySelectorAll('.post')))
-    update();
-};
-
 const data = {
     myProfile: {
         details: {
@@ -90,11 +83,23 @@ function update () {
         };
 
         postListHtml.innerHTML += `<div class="post"> ${postHtml} </div>`;
+
     })
+
+    document.querySelectorAll('.fa-trash-alt').forEach((icon, index) => {
+        icon.addEventListener('click', function(){
+           
+            data.myProfile.posts.splice(index, 1);
+            update();
+    
+            console.log(data.myProfile.posts)
+        })
+    })
+
 };
 update();
 
+
+
 document.querySelector('.send').addEventListener('click', newPost)
-document.querySelectorAll('.fa-trash-alt').forEach((icon, index) => {
-    icon.addEventListener('click', deletePost(index));
-})
+
