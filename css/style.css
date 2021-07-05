@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#profile-page {
+    min-width: 600px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #eee;
+    padding: 20px;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.user-pic{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+
+.user-pic img {   /*Fixed squished pic in posts*/
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.user-details .user-name {
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.new-post {
+    display: flex;
+    margin: 30px 0;
+}
+
+.new-post textarea {
+    flex-grow: 1;
+    border: 1px #ccc solid;
+    height: 40px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.new-post .send {
+    padding: 0 30px;
+    background: #1877F2;
+    color: #fff;
+    border: 0;
+    font-weight: bold;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.post {
+    border: 1px #ccc solid;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.post i {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #bbb;
+    font-size: 20px;
+}
+
+.post-media img {
+    width: 100%;
+}
+
+.post-details {
+    display: flex;
+    align-items: center;
+}
+
+.post-details .details {
+    margin-left: 15px;
+}
+
+.post-details .details .user-name {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.post-details .details .post-date {
+    font-size: 11px;
+}
+
+.post-text {
+    margin: 15px 0;
+}
+
+.post-text span {
+    white-space: pre-wrap;
+}  /* This allows \n to work and create new lines! */
